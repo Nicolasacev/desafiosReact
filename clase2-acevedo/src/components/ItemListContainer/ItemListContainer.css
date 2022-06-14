@@ -1,5 +1,12 @@
 .ItemListContainer{
   background-color: lightblue;
-  height: 20rem;
+  height: auto;
   width: 100%;
+}
+
+.Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
