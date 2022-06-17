@@ -1,0 +1,59 @@
+[{"id": "fl/45",
+    "nombre": "Radiador",
+    "familia": "Refrigeracion",
+    "modelo": "Ford",
+    "stock": 2,
+    "codigo": "cn15/8200/ba",
+    "precio": 70000,
+    "imagen": "img/Radiador.jpg",
+    "detalle": "detalle Radiador"
+  },
+
+  {
+    "id": "fl/46",
+    "nombre": "Optica",
+    "familia": "Electricidad",
+    "modelo": "Fiat",
+    "stock": 9,
+    "codigo": "8n15/13005/ba",
+    "precio": 20000,
+    "imagen": "img/Optica.jpg",
+    "detalle": "detalle optica"
+  },
+
+  {
+    "id": "fl/47",
+    "nombre": "Espejo",
+    "familia": "Carroceria",
+    "modelo": "Peugeot",
+    "stock": 2,
+    "codigo": "ab39/8230/ca",
+    "precio": 35000,
+    "imagen": "img/Espejo.jpg",
+    "detalle": "detalle Espejo"
+  },
+
+  {
+    "id": "fl/50",
+    "nombre": "Puerta",
+    "familia": "Chapa",
+    "modelo": "Chevrolet",
+    "stock": 2,
+    "codigo": "an15/n16016/ba",
+    "precio": 40000,
+    "imagen": "img/Puerta.jpg",
+    "detalle": "detalle puerta"
+  },
+
+  {
+    "id": "fl/48",
+    "nombre": "Módulo ECU",
+    "familia": "Combustible",
+    "modelo": "Chevrolet",
+    "stock": 8,
+    "codigo": "an15/n16018/ba",
+    "precio": 40000,
+    "imagen": "img/Modulo.jpg",
+    "detalle": "detalle Modulo"
+  }
+]

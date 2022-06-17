@@ -1,12 +1,12 @@
 .ItemListContainer{
-  background-color: lightblue;
+  background: radial-gradient( 100% 0% at 0% 100%, white 70%, lightblue 100% );
   height: auto;
   width: 100%;
 }
 
 .Container{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-flow: row wrap;
 }

@@ -1,13 +1,29 @@
-import React from "react";
-import { ItemCount } from "../ItemCount/ItemCount";
+import React, { useState, useEffect } from "react";
+//import { ItemCount } from "../ItemCount/ItemCount";
+import { ItemList } from "../ItemList/ItemList";
 import './ItemListContainer.css';
 
+
+
+
 export const ItemListContainer = (props) => {
+
+  const [items, setItems] = useState([])
+
+  useEffect(() => {
+    setTimeout(() => {
+      fetch('products.json')
+      .then(resultado => resultado.json())
+      .then(data => setItems(data))
+    }, 2000);    
+}, [])
+
   return (
       <div className="ItemListContainer">
         <h2 style={{textAlign:'center'}}>{props.gretting}</h2>
         <div className="Container">
-          <ItemCount/>
+          {/* <ItemCount/> */}
+          <ItemList items={items}/>
         </div>
       </div>
   );
