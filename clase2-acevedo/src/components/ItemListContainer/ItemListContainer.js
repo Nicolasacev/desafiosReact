@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from "react";
-//import { ItemCount } from "../ItemCount/ItemCount";
 import { ItemList } from "../ItemList/ItemList";
 import './ItemListContainer.css';
 
-
-
-
 export const ItemListContainer = (props) => {
-
   const [items, setItems] = useState([])
 
   useEffect(() => {
@@ -22,7 +17,6 @@ export const ItemListContainer = (props) => {
       <div className="ItemListContainer">
         <h2 style={{textAlign:'center'}}>{props.gretting}</h2>
         <div className="Container">
-          {/* <ItemCount/> */}
           <ItemList items={items}/>
         </div>
       </div>

@@ -1,6 +1,6 @@
 .ItemCountContainer{
-    height: 15rem;
-    width: 15rem;
+    height: 8rem;
+    width: 8rem;
     border-radius: 15px;
     background-color: dodgerblue;
     display: flex;
@@ -10,11 +10,10 @@
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
     border-radius: 15px;
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -23,7 +22,11 @@
     transition-duration: 0.4s;
     cursor: pointer;
   }
-  
+
+  .addToCart{
+    background: radial-gradient( 100% 100% at 100% 0%, yellow 0%, orange 100% );
+  }
+
   .button1 {
     background-color: white; 
     color: black; 
