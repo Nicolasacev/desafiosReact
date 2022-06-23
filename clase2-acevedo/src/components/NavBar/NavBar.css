@@ -11,6 +11,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-flow:row wrap ;
   }
   
   .topnav a {
@@ -30,4 +31,9 @@ body {
   .topnav a.active {
     background-color:dodgerblue;
     color: white;
+  }
+
+  .navList{
+    display: flex;
+    flex-flow: row nowrap;
   }

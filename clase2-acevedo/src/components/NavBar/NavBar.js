@@ -1,14 +1,17 @@
 import React from "react";
 import { CartWidget } from "../CartWidget/CartWidget";
 import './NavBar.css';
+import { Link } from "react-router-dom";
+import { CategoryButton } from "./CategoryButton/CategoryButton";
 
 export const NavBar = () => {
+
   return (
     <nav className="topnav">
-      <div>
-        <a href="#home">Crash Parts</a>
-        <a href="#home">Home</a>
-        <a className="active" href="#productos">Productos</a>
+      <div className="navList">
+        <Link to="/" >Crash Parts</Link> 
+        <Link to="/" >Productos</Link> 
+        <CategoryButton/>
       </div>
       <CartWidget/>
     </nav>

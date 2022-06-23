@@ -1,30 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { ItemDetail } from "../ItemDetail/ItemDetail";
-import './ItemDetailContainer.css';
+import React, { useEffect, useState} from 'react'
+import axios from "axios"
+import { ItemDetail } from '../ItemDetail/ItemDetail';
 
 
-export const ItemDetailContainer = () => {
+ const ItemDetailContainer = () => {
+      const [item, setItem] = useState([]);
+    
+      useEffect(() => {
+        const getItems = () => {
+          axios.get("http://localhost:3000/data/products.json")
+            .then((response) => setItem(response.data.item));
+console.log(item);
+        };
+        getItems();
+      }, []);
+console.log("hola 1");
 
-// Implementar mock invocando a getItem() y utilizando el resolver then
-
-  const [item, setItem] = useState({})
-
-useEffect(() => {
-
-    const getItem = () => { 
-    setTimeout(() => {
-      fetch('products.json')
-      .then(resultado => resultado.json())
-      .then((data) => setItem(data[1]))
-    }
-    , 2000)};  
-    console.log(item);
-    getItem()  
-}, [item])
-
-  return (  
-      <div className="ItemDetailContainer">
-          <ItemDetail {...item}/>
-      </div>
-  );
-}
+      return (
+        <ItemDetail item ={item}/>
+      );
+    };
+ 
+    export default ItemDetailContainer
+   
+    
+    

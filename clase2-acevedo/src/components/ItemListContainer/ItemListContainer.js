@@ -3,11 +3,12 @@ import { ItemList } from "../ItemList/ItemList";
 import './ItemListContainer.css';
 
 export const ItemListContainer = (props) => {
+
   const [items, setItems] = useState([])
 
   useEffect(() => {
     setTimeout(() => {
-      fetch('products.json')
+      fetch('data/products.json')
       .then(resultado => resultado.json())
       .then(data => setItems(data))
     }, 2000);    
