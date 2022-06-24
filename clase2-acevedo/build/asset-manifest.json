@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4553fa88.css",
+    "main.js": "/static/js/main.c9ebffd2.js",
+    "static/media/IconoCartWidget.png": "/static/media/IconoCartWidget.96c73cb49987ccdf1154.png",
+    "index.html": "/index.html",
+    "main.4553fa88.css.map": "/static/css/main.4553fa88.css.map",
+    "main.c9ebffd2.js.map": "/static/js/main.c9ebffd2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4553fa88.css",
+    "static/js/main.c9ebffd2.js"
+  ]
+}
