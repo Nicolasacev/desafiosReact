@@ -8,7 +8,7 @@ export const ItemListContainer = (props) => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch('data/products.json')
+      fetch('http://localhost:3000/data/products.json')
       .then(resultado => resultado.json())
       .then(data => setItems(data))
     }, 2000);    

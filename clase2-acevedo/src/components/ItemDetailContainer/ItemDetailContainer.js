@@ -1,24 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
+import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
 
-const [productos, setProductos] = useState([])
+const [producto, setProducto] = useState()
+
+const { productById } = useParams()
 
 useEffect(() => {
-  async function getItems() {
-    const URL = 'http://localhost:3000/data/products.json' 
-      await fetch(URL)
-          .then( res => res.json() )
-          .then( data => setProductos(data))
-         console.log(productos)
-  }
-    getItems()
+      getItems()
+      console.log(producto);
+    
+}, [])
 
-}, [productos])
+async function getItems() {
+  const URL = "http://localhost:3000/data/products.json" 
+    await fetch(URL)
+        .then( res => res.json() )
+        .then((data)=>{
+          setProducto(data.filter(e => e.id === productById))
+        })
+}
 
   return (
-    <ItemDetail item ={productos}/>
+    <ItemDetail producto = {producto}/>
   )
 
 }
