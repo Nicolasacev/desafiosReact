@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const CartWidget = () => {
   return (
     <div className="cartContainer">
-      <Link to="/">
+      <Link to="/cart">
         <img src={IconoCartWidget} alt="carrito" className="iconoCarrito"></img>
       </Link> 
     </div>
