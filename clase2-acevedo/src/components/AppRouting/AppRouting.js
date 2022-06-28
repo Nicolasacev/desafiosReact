@@ -10,7 +10,7 @@ return(
         <NavBar/>
         <Routes>
             <Route path="/" element={<ItemListContainer/>}/>  
-            <Route path="/category/:id" element={<ItemListContainer/>}/>
+            <Route path="/category/:familia" element={<ItemListContainer/>}/>
             <Route path="/item/:productById" element={<ItemDetailContainer/>}/>
         </Routes>
         <Footer/>

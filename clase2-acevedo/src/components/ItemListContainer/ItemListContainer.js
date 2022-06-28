@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import './ItemListContainer.css';
 import Data from '../Data.json'
+import { useParams } from "react-router-dom";
 
 export const ItemListContainer = (props) => {
 
   const [items, setItems] = useState([])
-
+  const {familia} = useParams()
+  
   useEffect(() => {
       const getItems = new Promise ((resolve) => {
           setTimeout(() => {                
@@ -14,9 +16,14 @@ export const ItemListContainer = (props) => {
           },1000)
       });
       getItems.then((res) =>{
-        setItems(res)
+        if (familia) {
+          const categoryFind = res.filter((element)=> element.familia.toLowerCase() === familia )
+          setItems(categoryFind)
+        }else{
+          setItems(res)
+        }       
       })
-}, [])
+}, [familia])
 
   return (
       <div className="ItemListContainer">

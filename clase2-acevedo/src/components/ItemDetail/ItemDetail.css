@@ -1,34 +1,33 @@
-.card{
-    width: 100vw;
+.DetailCard{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+    background: radial-gradient( 100% 100% at 100% 0%, black 0%, dodgerblue 100% );
+    color: #fff;    
+    /* border-radius: 15px; */
+    justify-self: center;
 }
 
-.imgContainer{
-    height: auto;
-    width: 90vw;
-    border: 1px black solid;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-    /* background-color: aqua; */
-}
+.imgDetailContainer{
+        margin-top: 20px;
+        height: 17rem;
+        width: 17rem;
+    }
 
-img{
-    width: 95%;
+.imgDetailContainer img{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
 }
 
 .descriptionContainer{
     display: flex;
     justify-content: center;
-    flex-flow: column nowrap;
-    width: 40rem;
+    flex-flow: column wrap;
+    
     align-items: center;
-    border: 1px black solid;
+    border: 1px white solid;
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
@@ -54,14 +53,13 @@ img{
 
 @media (min-width: 768px) {
     .descriptionContainer{
-        height: 30rem;
-        width: 30rem;
+        height: 25rem;
         justify-content: space-evenly;
     } 
 
-    .imgContainer{
-        height: 30rem;
-        width: 80vw;
+    .imgDetailContainer{
+        height: 20rem;
+        width: 40vw;
     }
 }
 
@@ -78,17 +76,16 @@ img{
         justify-content: space-evenly;
     } 
 
-    .imgContainer{
-        width: 40rem;
+    .imgDetailContainer{
+        height: 25rem;
+        width: auto;
     }
 }
 
 /*-----------------------------------breakpoint 1440px--------------------------------------*/
 
 @media (min-width: 1440px) {
-    .card{
-        padding: 6.25rem;
-    }
+
 
    .descriptionContainer{
         width: 40rem;

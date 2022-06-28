@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 import Data from '../Data.json'
+import './ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
 
