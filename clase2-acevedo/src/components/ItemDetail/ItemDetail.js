@@ -5,8 +5,13 @@ import {Link} from 'react-router-dom'
 
 
 export const ItemDetail = ({producto}) => {
+
  const [added, setAdded] = useState(false)
-  const addToCart = () => {
+
+ //CUANDO DE EJECUTA ADDTOCART RECIBIMOS EL PRODUCTO Y LA CANTIDAD QUE SE SELECCIONÓ
+  const addToCart = (producto, count) => {
+    console.log(producto);
+    console.log(count);
     setAdded(true)
   }
           return (
@@ -20,7 +25,7 @@ export const ItemDetail = ({producto}) => {
                 <p className='productPrice'> $ {producto.precio}</p>
                 <p>{producto.descripcion}</p>
                 { !added && 
-                <ItemCount stock={producto.stock} addToCart={addToCart}/>
+                <ItemCount producto={producto} addToCart={addToCart}/>
                 }
                 { added &&
                 <>

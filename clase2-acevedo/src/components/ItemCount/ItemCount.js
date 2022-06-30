@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import './ItemCountStyle.css';
 
-export const ItemCount = ( {stock,initial = 1, addToCart}) => {
+export const ItemCount = ( {producto, initial = 1, addToCart}) => {
     const [count, setCount] = useState(initial);
 
     const onAdd = () => { 
-        if (count < stock) {
+        if (count < producto.stock) {
           setCount(count + 1);
         }
     }
@@ -23,7 +23,7 @@ export const ItemCount = ( {stock,initial = 1, addToCart}) => {
             <button  className="button button1" onClick={onAdd}>+</button>
         </div>
         <div>
-            <button className="button addToCart" onClick={addToCart}>Agregar al carrito</button>
+            <button className="button addToCart" onClick={() => addToCart(producto, count)}>Agregar al carrito</button>
         </div>
     </div>
   )
