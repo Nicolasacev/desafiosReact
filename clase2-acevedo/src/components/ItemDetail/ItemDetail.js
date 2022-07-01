@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './ItemDetail.css';
 import { ItemCount } from "../ItemCount/ItemCount";
 import {Link} from 'react-router-dom'
-
+import { CartContext } from '../CartContext/CartContext';
 
 export const ItemDetail = ({producto}) => {
 
  const [added, setAdded] = useState(false)
 
+ //Hook para traer las funciones del context
+ const {addItemToCart} = useContext(CartContext);
+
  //CUANDO DE EJECUTA ADDTOCART RECIBIMOS EL PRODUCTO Y LA CANTIDAD QUE SE SELECCIONÓ
   const addToCart = (producto, count) => {
-    console.log(producto);
-    console.log(count);
+    addItemToCart(producto,count);
     setAdded(true)
   }
           return (

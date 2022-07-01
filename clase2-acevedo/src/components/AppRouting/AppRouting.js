@@ -1,5 +1,6 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import { Cart } from "../Cart/Cart"
+import { CartProvider } from "../CartContext/CartContext"
 import { Footer } from "../Footer/Footer"
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
 import { ItemListContainer } from "../ItemListContainer/ItemListContainer"
@@ -7,7 +8,8 @@ import { NavBar } from "../NavBar/NavBar"
 
 export const AppRouting = () =>{
 return( 
-    <BrowserRouter>
+    <CartProvider>
+        <BrowserRouter>
         <NavBar/>
         <Routes>
             <Route path="/" element={<ItemListContainer/>}/>  
@@ -17,5 +19,6 @@ return(
         </Routes>
         <Footer/>
     </BrowserRouter>
+    </CartProvider>
     )
 }
