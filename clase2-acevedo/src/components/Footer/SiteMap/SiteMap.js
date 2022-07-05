@@ -5,7 +5,7 @@ import './SiteMapStyle.css';
 export const SiteMap = () => {
   return (
     <div className='childFooter'>
-        <h5>Sitemap</h5>
+        <h5>SiteMap</h5>
         <br />
         <ul>
             <li>Home</li>

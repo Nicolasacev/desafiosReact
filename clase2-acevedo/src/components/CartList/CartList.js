@@ -1,0 +1,44 @@
+import React, { useContext } from 'react'
+import { Link } from "react-router-dom";
+import './cartList.css';
+import { CartItem } from '../CartItem/CartItem';
+import { CartContext } from '../CartContext/CartContext';
+
+export const CartList = () => {
+    const { totalPrice, cleanCart, cartIsEmpty } = useContext(CartContext)
+    return (
+        <>
+         { cartIsEmpty === false 
+         ?
+            <table className="table list">
+                <tbody className="tbody">
+                    <CartItem/>
+                    <div className="totalContainer">
+                        <div>
+                            <h3 className="itemCartTotal ">$ { totalPrice }</h3>
+                        </div>
+                        <div>
+                            <button type="button" className="btn btn-danger" onClick={()=>{cleanCart()}}>
+                                Vaciar Carrito
+                            </button>        
+                        </div>
+                        <div>
+                            <button type="button" className="btn buy">
+                                Comprar
+                            </button>        
+                        </div>
+                    </div>
+                </tbody>
+            </table>
+          :  
+          <div className='empty'>
+            <h5>No hay productos en el carrito</h5>
+            <Link to={"/"}><button>Ir a la tienda</button></Link>
+          </div>
+        }
+        </>
+         
+    )
+}
+
+

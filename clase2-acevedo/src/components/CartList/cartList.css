@@ -1,0 +1,81 @@
+.totalContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-evenly;
+    width: 80vw;
+}
+@media (max-width: 320px) {
+    .totalContainer{
+        flex-flow: column nowrap;
+        align-items: center;    
+    }
+
+    .empty{
+        height: 90vw;    
+    }
+}
+.list{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin-top: 20px;
+}
+tbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+tr{
+    display: flex;
+    flex-flow: row wrap;
+    background: linear-gradient(to bottom, rgb(10, 48, 85), black);
+    color: azure;
+    width: 80vw;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+
+}
+
+tr:hover{
+    box-shadow: -8px 5px 39px 0px rgba(0,0,0,0.66);
+    -webkit-box-shadow: -8px 5px 39px 0px rgba(0,0,0,0.66);
+    -moz-box-shadow: -8px 5px 39px 0px rgba(0,0,0,0.66);
+}
+
+td, th{
+    border: none;
+}
+
+p, h6{
+    margin-bottom: 0;
+}
+
+.buy{
+    background: radial-gradient( 100% 80% at 90% 0%, yellow 0%, orange 100% );
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+}
+
+.empty{
+    height: 90vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .empty{
+        height: 35vw;    
+    }
+}
+
+@media (min-width: 1024px) { 
+    .empty{
+        height: 40vw;    
+    }
+}

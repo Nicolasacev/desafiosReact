@@ -1,6 +1,6 @@
 .ItemListContainer{
-  background: rgb(28,159,213);
-background: linear-gradient(0deg, rgba(28,159,213,0.8939950980392157) 20%, rgba(198,232,236,0) 100%);
+  background: rgb(10, 48, 85);
+  background: linear-gradient(to bottom,black, rgb(10, 48, 85));
   width: 100%;
 }
 

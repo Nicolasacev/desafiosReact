@@ -9,7 +9,7 @@
     "año": "13/17",
     "stock": 10,
     "codigo": "cn15/8200/ba",
-    "precio": 70000,
+    "precio": "70000",
     "imagen": "/img/Radiador.jpg",
     "descripcion": "Radiador de aluminio"
   },
@@ -24,7 +24,7 @@
     "año": "2022",
     "stock": 9,
     "codigo": "8n15/13005/ba",
-    "precio": 25000,
+    "precio": "25000",
     "imagen": "/img/Optica.jpg",
     "descripcion": "Optica Halogena lado Izquierdo"
   },
@@ -39,7 +39,7 @@
     "año": "2021",
     "stock": 5,
     "codigo": "ab39/8230/ca",
-    "precio": 35000,
+    "precio": "35000",
     "imagen": "/img/Espejo.jpg",
     "descripcion": "Espejo calefaccionado"
   },
@@ -54,7 +54,7 @@
     "año": "2017",
     "stock": 3,
     "codigo": "an15/n16016/ba",
-    "precio": 40000,
+    "precio": "40000",
     "imagen": "/img/Puerta.jpg",
     "descripcion": "Puerta trasera derecha"
   },
@@ -69,7 +69,7 @@
     "año": "13/17",
     "stock": 8,
     "codigo": "an15/n16018/ba",
-    "precio": 40000,
+    "precio": "40000",
     "imagen": "/img/Modulo.jpg",
     "descripcion": "Modulo de airbags"
   }

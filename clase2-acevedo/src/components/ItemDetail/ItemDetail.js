@@ -32,7 +32,7 @@ export const ItemDetail = ({producto}) => {
                 { added &&
                 <>
                 <Link to="/cart" className='buttonCart1'>
-                  Ir al carrito          
+                  Terminar mi compra         
                 </Link>
                 <Link to="/" className='buttonCart1'>
                   Seguir comprando          

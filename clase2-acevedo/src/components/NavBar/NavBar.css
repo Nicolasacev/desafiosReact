@@ -11,8 +11,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-flow:row wrap ;
+    flex-flow:row nowrap ;
   }
+  @media (max-width: 320px) {
+    .topnav {
+      flex-flow:column nowrap ;
+    }
+}
   
   .topnav a {
     float: left;
