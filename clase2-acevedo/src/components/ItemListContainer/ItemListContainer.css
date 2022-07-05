@@ -10,3 +10,9 @@
   align-items: center;
   flex-flow: row wrap;
 }
+
+@media (min-width: 1600px) { 
+  .ItemListContainer{
+    height: 36vw;
+  }
+}

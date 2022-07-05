@@ -98,6 +98,10 @@
 
 @media (min-width: 1024px) {
 
+    .DetailCard{
+        height: 58vw;
+    }
+
     .card{
         flex-flow: row nowrap;
     }
@@ -111,11 +115,15 @@
         height: 25rem;
         width: auto;
     }
+
 }
 
 /*-----------------------------------breakpoint 1440px--------------------------------------*/
 
 @media (min-width: 1440px) {
+    .DetailCard{
+        height: 48rem;
+    }
 
    .descriptionContainer{
         width: 40rem;
