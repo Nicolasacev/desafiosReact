@@ -16,7 +16,7 @@
     color: black;   
 }
 
-.navbarCategorys{
+.navbarCategories{
     background: radial-gradient( 100% 100% at 100% 0%, black 0%, dodgerblue 100% );
     box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
 
@@ -24,5 +24,5 @@
 
 .li{
     background-color: orange;
-
+    border-radius: 5px;
 }

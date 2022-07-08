@@ -29,8 +29,13 @@ body {
     
   }
   
+  .dropdown-menu {
+    background-color: red;
+  }
+
+
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: dodgerblue;
     color: black;
   }
   
@@ -43,3 +48,6 @@ body {
     display: flex;
     flex-flow: row nowrap;
   }
+
+  
+  

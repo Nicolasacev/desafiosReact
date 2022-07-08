@@ -1,29 +1,44 @@
 import React, { useState, useEffect } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import './ItemListContainer.css';
-import Data from '../Data.json'
 import { useParams } from "react-router-dom";
+import { collection, getDocs, getFirestore,query, where} from "firebase/firestore";
+
 
 export const ItemListContainer = (props) => {
 
   const [items, setItems] = useState([])
   const {familia} = useParams()
-  
+
+
+
   useEffect(() => {
-      const getItems = new Promise ((resolve) => {
-          setTimeout(() => {                
-              resolve(Data);
-          },1000)
-      });
-      getItems.then((res) =>{
-        if (familia) {
-          const categoryFind = res.filter((element)=> element.familia.toLowerCase() === familia )
-          setItems(categoryFind)
-        }else{
-          setItems(res)
-        }       
-      })
-}, [familia])
+    const db = getFirestore();
+
+    const myItems = familia 
+    ?
+    query(collection(db, 'productos'), where('familia', '==', familia))
+    :
+    collection(db, 'productos');
+
+    //ponemos el async con una funcion anónima para que no cree conflictos con UseEffect- 
+    (async function(){
+        
+        try { 
+             //traemos los productos de Firebase
+            const querySnapshot = await getDocs(myItems)
+        
+            setItems(querySnapshot.docs.map(el => {
+            return { ...el.data(), id: el.id }
+            
+            }))
+        } 
+        catch {
+            console.log("Error al traer los productos de Firebase")
+      }
+
+    })();
+  }, [familia]);
 
   return (
       <div className="ItemListContainer">

@@ -2,12 +2,13 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content:space-evenly;
-    width: 80vw;
 }
 @media (max-width: 320px) {
     .totalContainer{
         flex-flow: column nowrap;
-        align-items: center;    
+        align-items: center;  
+        justify-content: space-evenly; 
+        height: 10rem; 
     }
 
     .empty{

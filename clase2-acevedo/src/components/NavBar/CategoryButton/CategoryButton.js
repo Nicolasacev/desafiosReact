@@ -17,7 +17,7 @@ export const CategoryButton = () => {
                 <button href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" className='categoryButton'>
                     Categorias
                 </button>
-                <ul className="dropdown-menu navbarCategorys" aria-labelledby="navbarDropdownMenuLink">
+                <ul className="dropdown-menu navbarCategories" aria-labelledby="navbarDropdownMenuLink">
                     {categoriesGroup.map((cat) => {
                         return (
                             <Link to={cat.path} key={cat.id} ><li className="dropdown-item li">{cat.nombre}</li></Link> 
