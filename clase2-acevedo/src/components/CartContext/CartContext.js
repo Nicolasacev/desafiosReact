@@ -1,4 +1,5 @@
 import React, {createContext, useState} from 'react'
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 export const CartContext = createContext();
 
@@ -12,6 +13,14 @@ export const CartProvider = ({children}) => {
     const [totalPrice, setTotalPrice] = useState(0)
     //useState que maneja el estado del carrito vacio/con productos
     const [cartIsEmpty, setCartIsEmpty] = useState(true);
+    //estado que guarda el id de la ultima orden de compra para entregarsela al usuario
+    const [lastId, setLastId] = useState()
+    //obtener db de firestore
+    const db = getFirestore();
+    //estado que indica si ya se realizola compra
+    const [buyIsFinished, setBuyIsFinished] = useState(false);
+
+
     
     //función para agregar elementos al carrito
     const addItemToCart = (producto, count) => {
@@ -64,15 +73,46 @@ export const CartProvider = ({children}) => {
         setCartIsEmpty(true)
     }
 
+    const onSubmit = async(data) => {
+          const order = 
+            {Buyer: 
+                {
+                name:data.name,
+                email:data.email,
+                phone:data.phone
+            },
+            Productos: cart.map(e => {
+                return {
+                    producto:
+                    e.nombre,
+                    precio: e.precio,
+                    cantidad: e.cantidad
+                }
+            }),
+                    
+            Total: {
+                    totalPrice
+                }
+            }
+            
+            const {id} = await addDoc(collection(db, "orders"), order);
+            setLastId(id)
+            setBuyIsFinished(true)
+            cleanCart()   
+    }
+
     return (
         <CartContext.Provider value={{
              cart,
              cant,
              totalPrice,
              cartIsEmpty,
+             lastId,
+             buyIsFinished,
              addItemToCart,
              removeFromCart,  
-             cleanCart
+             cleanCart,
+             onSubmit
              }}>
             {children}
         </CartContext.Provider>

@@ -26,9 +26,11 @@ export const CartList = () => {
                 </button>        
             </div>
             <div>
-                <button type="button" className="btn buy">
-                    Comprar
-                </button>        
+                <Link to={"/order"}>
+                    <button type="button" className="btn buy">
+                        Comprar
+                    </button>
+                </Link>        
             </div>
         </div>
     </>
