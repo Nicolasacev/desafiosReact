@@ -35,14 +35,13 @@ export const CartList = () => {
         </div>
     </>
             
-          :  
+        :  
           <div className='empty'>
             <h5>No hay productos en el carrito</h5>
             <Link to={"/"}><button className='toHome'>Ir a la tienda</button></Link>
           </div>
         }
-        </>
-         
+        </>         
     )
 }
 

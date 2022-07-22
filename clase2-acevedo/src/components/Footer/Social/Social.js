@@ -1,6 +1,4 @@
 import React from 'react'
-import './SocialStyle.css';
-
 
 export const Social = () => {
   return (

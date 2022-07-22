@@ -3,7 +3,6 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 export const CartContext = createContext();
 
-
 export const CartProvider = ({children}) => {
     //useState del carrito
     const [cart, setCart] = useState([]);
@@ -20,8 +19,6 @@ export const CartProvider = ({children}) => {
     //estado que indica si ya se realizola compra
     const [buyIsFinished, setBuyIsFinished] = useState(false);
 
-
-    
     //función para agregar elementos al carrito
     const addItemToCart = (producto, count) => {
         
@@ -108,7 +105,9 @@ export const CartProvider = ({children}) => {
              totalPrice,
              cartIsEmpty,
              lastId,
+             setLastId,
              buyIsFinished,
+             setBuyIsFinished,
              addItemToCart,
              removeFromCart,  
              cleanCart,

@@ -1,6 +1,4 @@
 import React from 'react'
-import './AboutListStyle.css';
-
 
 export const AboutList = () => {
   return (

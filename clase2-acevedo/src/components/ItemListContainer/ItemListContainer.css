@@ -2,17 +2,18 @@
   background: rgb(10, 48, 85);
   background: linear-gradient(to bottom,black, rgb(10, 48, 85));
   width: 100%;
+  min-height: calc(100vh - 8em)
 }
 
 .Container{
+  height: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-flow: row wrap;
 }
-
-h2{
-  margin-bottom: 0;
+.loader{
+  margin-top: 5rem;
 }
 
 @media (min-width: 1600px) { 

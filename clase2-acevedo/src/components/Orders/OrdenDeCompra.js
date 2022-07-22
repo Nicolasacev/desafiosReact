@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './ordenDeCompra.css';
-
+import { CartContext } from '../CartContext/CartContext';
+import { Link } from 'react-router-dom';
 
 const OrdenDeCompra = ({lastId}) => {
+  const { setLastId, setBuyIsFinished } = useContext(CartContext)
+
+  const cleanOrder = () => {
+    setLastId()
+    setBuyIsFinished(false)
+  }
+
   return (
     <div className='orderMain'>    
-      <h2 className='orderSuccess'>¡Tu compra se realizó con éxito!</h2>
-      <div>Tu código de orden de compra es: {lastId}</div>
+      <h2 className='orderSuccess'>¡Tu pedido está más cerca tuyo!</h2>
+      <div>ID de tu orden: {lastId}</div>
+      <Link to="/">
+      <button className='toHome' onClick= {() => cleanOrder()}>Finalizar compra</button>
+      </Link>
     </div>
   )
 }

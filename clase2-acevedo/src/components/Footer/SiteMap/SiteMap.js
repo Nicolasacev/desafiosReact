@@ -1,6 +1,4 @@
 import React from 'react'
-import './SiteMapStyle.css';
- 
 
 export const SiteMap = () => {
   return (

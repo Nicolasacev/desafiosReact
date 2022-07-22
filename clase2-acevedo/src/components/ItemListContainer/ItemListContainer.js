@@ -3,14 +3,13 @@ import { ItemList } from "../ItemList/ItemList";
 import './ItemListContainer.css';
 import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore,query, where} from "firebase/firestore";
-
+import HashLoader from "react-spinners/HashLoader";
 
 export const ItemListContainer = (props) => {
 
   const [items, setItems] = useState([])
   const {familia} = useParams()
-
-
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const db = getFirestore();
@@ -25,6 +24,7 @@ export const ItemListContainer = (props) => {
     (async function(){
         
         try { 
+            setLoading(true)
              //traemos los productos de Firebase
             const querySnapshot = await getDocs(myItems)
         
@@ -35,8 +35,9 @@ export const ItemListContainer = (props) => {
         } 
         catch {
             console.log("Error al traer los productos de Firebase")
+        }
+      finally{setLoading(false)
       }
-
     })();
   }, [familia]);
 
@@ -44,7 +45,11 @@ export const ItemListContainer = (props) => {
       <div className="ItemListContainer">
         <h2 style={{textAlign:'center'}}>{props.gretting}</h2>
         <div className="Container">
+        {loading ?
+          <HashLoader className="loader" color="#ffa500" size={180}/>
+          :
           <ItemList items={items}/>
+        }
         </div>
       </div>
   );

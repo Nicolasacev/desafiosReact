@@ -4,7 +4,6 @@ import { CartContext } from '../CartContext/CartContext';
 import OrdenDeCompra from './OrdenDeCompra'
 import { Cart } from '../Cart/Cart';
 
-
 export const OrderContainer = () => {
 
   const { lastId, buyIsFinished, cartIsEmpty} = useContext(CartContext)
@@ -19,9 +18,7 @@ export const OrderContainer = () => {
       {
        (lastId) && <OrdenDeCompra lastId={lastId}/>
       }
-    
     </>
-    
   )
 }
 
